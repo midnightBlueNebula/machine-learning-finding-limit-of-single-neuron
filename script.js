@@ -141,7 +141,7 @@ async function train() {
 
   model.compile({
 
-    optimizer: tf.train.sgd(LEARNING_RATE),
+    optimizer: OPTIMIZER,
 
     loss: 'meanSquaredError'
 
@@ -152,11 +152,11 @@ async function train() {
   let results = await model.fit(FEATURE_RESULTS.NORMALIZED_VALUES, OUTPUTS_TENSOR, {
     callbacks: {onEpochEnd: logProgress},
     
-    shuffle: true,           // Ensure data is shuffled in case it was in an order
+    shuffle: true,           
 
-    batchSize: 2,          // As we have a lot of training data, batch size is set to 64.
+    batchSize: 2,          
 
-    epochs: 200          // Go over the data 10 times!
+    epochs: 200          
 
   });
 
