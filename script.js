@@ -42,11 +42,9 @@ for (let n = 0; n < INPUTS.length; n++) {
 tf.util.shuffleCombo(INPUTS, OUTPUTS);
 
 
-// Input feature Array of Arrays needs 2D tensor to store.
 
 const INPUTS_TENSOR = tf.tensor1d(INPUTS);
 
-// Output can stay 1 dimensional.
 
 const OUTPUTS_TENSOR = tf.tensor1d(OUTPUTS);
 
