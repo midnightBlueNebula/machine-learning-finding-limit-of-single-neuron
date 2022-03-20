@@ -1,1 +1,1 @@
-# machine-learning-finding-limit-of-single-neuron
+Machine learning: Finding limit of single neuron. (from Google AI EDX course).
